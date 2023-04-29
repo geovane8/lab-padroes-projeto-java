@@ -1,22 +1,17 @@
-package subsistema2.cep;
+private CepApi() {}
 
-public class CepApi {
+public static CepApi getInstancia() {
+	return instancia;
+}
 
-	private static CepApi instancia = new CepApi();
+public String recuperarCidade(String cep) {
+	// Aqui poderia ser implementada a lógica para recuperar a cidade com base no CEP
+	// Por enquanto, vamos retornar uma cidade fixa
+	return "Araraquara";
+}
 
-	private CepApi() {
-		super();
-	}
-
-	public static CepApi getInstancia() {
-		return instancia;
-	}
-	
-	public String recuperarCidade(String cep) {
-		return "Araraquara";
-	}
-	
-	public String recuperarEstado(String cep) {
-		return "SP";
-	}
+public String recuperarEstado(String cep) {
+	// Aqui poderia ser implementada a lógica para recuperar o estado com base no CEP
+	// Por enquanto, vamos retornar um estado fixo
+	return "SP";
 }
