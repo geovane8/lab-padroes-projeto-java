@@ -3,17 +3,21 @@ package one.digitalinnovation.gof.singleton;
 /**
  * Singleton "apressado".
  * 
- * @author falvojr
+ * @author
  */
-public class SingletonEager {
+public final class SingletonEager {
 
-	private static SingletonEager instancia = new SingletonEager();
+	private static final SingletonEager INSTANCIA = new SingletonEager();
 	
 	private SingletonEager() {
-		super();
+		// previne a instanciação direta da classe
 	}
 	
 	public static SingletonEager getInstancia() {
-		return instancia;
+		return INSTANCIA;
+	}
+	
+	public void metodoExemplo() {
+		// método de exemplo
 	}
 }
